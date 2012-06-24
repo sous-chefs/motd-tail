@@ -18,13 +18,10 @@
 # limitations under the License.
 #
 
-roles = node.run_list.roles
-
 template "/etc/motd.tail" do
   source "motd.tail.erb"
   group "root"
   owner "root"
   mode "0644"
   backup 0
-  variables(:roles => roles )
 end
