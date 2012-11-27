@@ -1,3 +1,3 @@
 source :rubygems
 
-gem 'test-kitchen', "~> 0.5.4"
+gem 'test-kitchen'
