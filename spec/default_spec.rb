@@ -75,4 +75,13 @@ describe "motd-tail::default" do
     chef_run.should create_file_with_content @file,
       "tag2"
   end
+
+  it "has additional text" do
+    chef_run = ChefSpec::ChefRunner.new do |n|
+      n.set['motd-tail'] = {}
+      n.set['motd-tail']['additional_text'] = "this is some additional text"
+    end.converge "motd-tail::default"
+    chef_run.should create_file_with_content @file,
+      "this is some additional text"
+  end
 end
