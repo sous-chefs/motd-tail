@@ -1,4 +1,3 @@
-
 ***
 Chef-Client - <%= node.name %>
 Hostname: <%= node['cloud'] ? node['cloud']['public_hostname'] : node['fqdn'] %>
@@ -23,3 +22,4 @@ Tags:
 <% end -%>
 ***
 
+<%= node['motd-tail']['additional_text'] %>

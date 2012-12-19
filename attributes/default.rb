@@ -1,9 +1,9 @@
 #
-# Author:: Nathan Haneysmith<nathan@opscode.com>
+# Author:: John Dewey (<john@dewey.ws>)
 # Cookbook Name:: motd
 # Recipe:: default
 #
-# Copyright 2009, Opscode, Inc.
+# Copyright 2012, John Dewey
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,10 +18,4 @@
 # limitations under the License.
 #
 
-template "/etc/motd.tail" do
-  source "motd.tail.erb"
-  group  "root"
-  owner  "root"
-  mode   00644
-  backup 0
-end
+default['motd-tail']['additional_text'] = nil
