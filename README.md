@@ -8,11 +8,25 @@ Requirements
 
 Needs to be used on a system that utilizes /etc/motd.tail, e.g. Ubuntu.
 
+Attributes
+==========
+
+* `node['motd-tail']['additional_text']` - Additional text to add to the end
+  of the motd.tail (e.g. unauthorized access banner).
+
 Usage
 =====
 
-When the node runs, the recipe will add the list of roles to
-`/etc/motd.tail` so you can tell at a glance on login what the system is.
+```json
+"run_list": [
+    "recipe[motd-tail]"
+]
+```
+
+default
+----
+
+Updates motd.tail with useful node data
 
 Examples
 --------
@@ -28,6 +42,19 @@ For example,
     munin_server
     rsyslog_server
     ***
+
+    Additional text here when `node['motd-tail']['additional_text']` present.
+
+Testing
+=====
+
+This cookbook is using [ChefSpec](https://github.com/acrmp/chefspec) for testing.
+
+    % cd $repo
+    % bundle
+    % librarian-chef install
+    % ln -s ../ cookbooks/motd-tail
+    % rspec cookbooks/motd-tail
 
 License and Author
 ==================
