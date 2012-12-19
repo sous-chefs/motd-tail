@@ -29,6 +29,17 @@ For example,
     rsyslog_server
     ***
 
+Testing
+=====
+
+This cookbook is using [ChefSpec](https://github.com/acrmp/chefspec) for testing.
+
+    $ cd $repo
+    $ bundle
+    $ librarian-chef install
+    $ ln -s ../ cookbooks/motd-tail
+    $ rspec cookbooks/motd-tail
+
 License and Author
 ==================
 
