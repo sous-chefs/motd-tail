@@ -10,7 +10,7 @@ Environment: <%= node.chef_environment %>
 Last Run: <%= ::Time.now %>
 
 Roles:
-<% node['roles'].each do |role| -%>
+<% node['roles'].sort.each do |role| -%>
   <%= role %>
 <% end -%>
 <% if node['tags'] && !node['tags'].empty? -%>
