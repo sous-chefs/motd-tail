@@ -1,6 +1,14 @@
-Cheffile.lock
+.vagrant
+Berksfile.lock
+Gemfile.lock
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
 .bundle
 .cache
 .kitchen
-/cookbooks
-/tmp
+bin
+.kitchen.local.yml

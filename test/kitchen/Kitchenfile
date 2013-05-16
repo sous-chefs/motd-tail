@@ -1,4 +1,0 @@
-cookbook "motd-tail" do
-  runtimes []
-  lint :ignore => %w{FC035}
-end
