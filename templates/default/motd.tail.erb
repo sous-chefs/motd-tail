@@ -7,7 +7,6 @@ Chef Server: <%= Chef::Config[:chef_server_url] %>
 <% if node.chef_environment != '_default' -%>
 Environment: <%= node.chef_environment %>
 <% end -%>
-Last Run: <%= ::Time.now %>
 
 Roles:
 <% node['roles'].each do |role| -%>
