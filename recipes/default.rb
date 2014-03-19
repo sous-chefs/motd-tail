@@ -18,10 +18,6 @@
 # limitations under the License.
 #
 
-template "/etc/motd.tail" do
-  source "motd.tail.erb"
-  group  "root"
-  owner  "root"
-  mode   00644
-  backup 0
+motd_tail '/etc/motd.tail' do
+  action :create
 end

@@ -1,8 +1,5 @@
-site :opscode
+source 'http://api.berkshelf.com'
 
 metadata
 
-group :integration do
-  cookbook "apt"
-  cookbook "yum"
-end
+cookbook 'motd-tail_test', path: 'test/fixtures/cookbooks/motd-tail_test'
