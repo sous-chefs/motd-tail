@@ -1,6 +1,11 @@
 motd-tail CHANGELOG
 ===================
 
+v2.0.0 (2014-03-18)
+-------------------
+Refactoring into a library cookbook to allow template replacement
+
+
 v1.2.2 (2014-03-18)
 -------------------
 - [COOK-4434] - remove timestamp from template to prevent a change every Chef run
