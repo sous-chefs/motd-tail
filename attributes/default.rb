@@ -19,3 +19,7 @@
 #
 
 default['motd-tail']['additional_text'] = nil
+
+# People like choices and not every user has knife access
+default['motd-tail']['last_run_timestamp'] = nil
+

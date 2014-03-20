@@ -19,6 +19,11 @@ Tags:
   <%= tag %>
 <% end -%>
 <% end -%>
+
+<% if node['motd-tail']['last_run_timestamp'] -%>
+Last Run: <%= ::Time.now %>
+<% end -%>
+
 ***
 
 <%= node['motd-tail']['additional_text'] %>
