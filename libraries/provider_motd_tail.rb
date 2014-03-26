@@ -33,7 +33,7 @@ class Chef::Provider::MotdTail < Chef::Provider::LWRPBase
       template new_resource.path do
         if new_resource.template_source.nil?
           source 'motd.tail.erb'
-          cookbook 'motd'
+          cookbook 'motd-tail'
         else
           source new_resource.template_source
         end
