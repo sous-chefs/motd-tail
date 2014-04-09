@@ -1,6 +1,11 @@
 motd-tail CHANGELOG
 ===================
 
+v2.0.2 (2014-04-09)
+-------------------
+#7 - Fix wrong cookbook name in template source parameter
+
+
 v2.0.0 (2014-03-18)
 -------------------
 Refactoring into a library cookbook to allow template replacement
