@@ -3,7 +3,7 @@
 # Resource:: motd_tail
 #
 # Author:: Sean OMeara <someara@chef.io>
-# Copyright 2013, Chef
+# Copyright 2013-2015, Chef Software Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License""");
 # you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ class Chef::Resource::MotdTail < Chef::Resource::LWRPBase
   self.resource_name = 'motd_tail'
 
   actions :create, :delete
-  default_action :create  
+  default_action :create
   attribute :path, :kind_of => String, :name_attribute => true, :default => '/etc/motd.tail'
   attribute :template_source, :kind_of => String, :default => nil
 end
