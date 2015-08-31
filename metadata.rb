@@ -11,3 +11,7 @@ recipe           'motd-tail', 'Updates motd.tail with useful node data'
 %w(debian ubuntu).each do |os|
   supports os
 end
+
+source_url 'https://github.com/opscode-cookbooks/motd-tail' if respond_to?(:source_url)
+issues_url 'https://github.com/opscode-cookbooks/motd-tail/issues' if respond_to?(:source_url)
+
