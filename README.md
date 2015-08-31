@@ -1,5 +1,8 @@
-Description
-===========
+motd-tail Cookbook
+==================
+
+[![Build Status](https://travis-ci.org/opscode-cookbooks/motd-tail.svg?branch=master)](http://travis-ci.org/opscode-cookbooks/motd-tail)
+[![Cookbook Version](https://img.shields.io/cookbook/v/motd-tail.svg)](https://supermarket.chef.io/cookbooks/motd-tail)
 
 Updates motd.tail with Chef Roles
 
@@ -61,7 +64,7 @@ License and Author
 
 Author:: Nathan Haneysmith <nathan@chef.io>
 
-Copyright:: 2009-2012, Chef Software, Inc
+Copyright:: 2009-2015, Chef Software, Inc
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
