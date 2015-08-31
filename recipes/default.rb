@@ -17,7 +17,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-motd_tail '/etc/motd.tail' do
-  action :create
+case node[:platform_family]
+when "debian"
+  motd_tail '/etc/motd.tail' do
+    action :create
+  end
+when "rhel"
+  motd_tail '/etc/motd' do
+    action :create
+  end
 end

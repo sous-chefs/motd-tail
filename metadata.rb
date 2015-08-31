@@ -8,7 +8,7 @@ version '2.0.3'
 
 recipe 'motd-tail', 'Updates motd.tail with useful node data'
 
-%w(debian ubuntu).each do |os|
+%w(debian ubuntu centos).each do |os|
   supports os
 end
 
