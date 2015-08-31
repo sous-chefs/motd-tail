@@ -48,17 +48,6 @@ For example,
 
     Additional text here when `node['motd-tail']['additional_text']` present.
 
-Testing
-=====
-
-This cookbook is using [ChefSpec](https://github.com/acrmp/chefspec) for testing.
-
-    % cd $repo
-    % bundle
-    % librarian-chef install
-    % ln -s ../ cookbooks/motd-tail
-    % rspec cookbooks/motd-tail
-
 License and Author
 ==================
 
