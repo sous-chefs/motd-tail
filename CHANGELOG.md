@@ -1,5 +1,6 @@
 motd-tail CHANGELOG
 ===================
+This file is used to list changes made in each version of the motd-tail cookbook.
 
 v2.0.2 (2014-04-09)
 -------------------
