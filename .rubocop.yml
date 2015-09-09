@@ -4,14 +4,11 @@ AllCops:
 
 AlignParameters:
   Enabled: false
-
 Encoding:
   Enabled: false
-
 LineLength:
-  Max: 200
-
-# Offense count: 1
-# Configuration parameters: Exclude.
-FileName:
+  Enabled: false
+MethodLength:
+  Enabled: false
+SingleSpaceBeforeFirstArg:
   Enabled: false
