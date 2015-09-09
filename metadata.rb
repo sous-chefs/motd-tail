@@ -12,5 +12,5 @@ recipe 'motd-tail', 'Updates motd.tail with useful node data'
   supports os
 end
 
-source_url 'https://github.com/opscode-cookbooks/motd-tail' if respond_to?(:source_url)
-issues_url 'https://github.com/opscode-cookbooks/motd-tail/issues' if respond_to?(:source_url)
+source_url 'https://github.com/chef-cookbooks/motd-tail' if respond_to?(:source_url)
+issues_url 'https://github.com/chef-cookbooks/motd-tail/issues' if respond_to?(:issues_url)

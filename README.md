@@ -1,7 +1,7 @@
 motd-tail Cookbook
 ==================
 
-[![Build Status](https://travis-ci.org/opscode-cookbooks/motd-tail.svg?branch=master)](http://travis-ci.org/opscode-cookbooks/motd-tail)
+[![Build Status](https://travis-ci.org/chef-cookbooks/motd-tail.svg?branch=master)](http://travis-ci.org/chef-cookbooks/motd-tail)
 [![Cookbook Version](https://img.shields.io/cookbook/v/motd-tail.svg)](https://supermarket.chef.io/cookbooks/motd-tail)
 
 Updates motd.tail with Chef Roles
