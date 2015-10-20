@@ -1,5 +1,5 @@
 #
-# Author:: Nathan Haneysmith<nathan@chef.io>
+# Author:: Nathan Haneysmith <nathan@chef.io>
 # Cookbook Name:: motd
 # Recipe:: default
 #
