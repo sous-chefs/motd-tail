@@ -7,18 +7,26 @@ motd-tail Cookbook
 Updates motd.tail with Chef Roles
 
 Requirements
-============
+------------
+#### Platforms
+- Debian/Ubuntu
 
-Needs to be used on a system that utilizes /etc/motd.tail, e.g. Ubuntu.
+#### Chef
+- Chef 11+
+
+#### Cookbooks
+- None
+
 
 Attributes
-==========
+----------
 
 * `node['motd-tail']['additional_text']` - Additional text to add to the end
   of the motd.tail (e.g. unauthorized access banner).
 
+
 Usage
-=====
+-----
 
 ```json
 "run_list": [
@@ -26,13 +34,11 @@ Usage
 ]
 ```
 
-default
-----
+###default
 
 Updates motd.tail with useful node data
 
-Examples
---------
+###Examples
 
 For example,
 
@@ -48,14 +54,14 @@ For example,
 
     Additional text here when `node['motd-tail']['additional_text']` present.
 
-License and Author
-==================
+License & Authors
+-----------------
 
-Author:: Nathan Haneysmith <nathan@chef.io>
+**Author:** Cookbook Engineering Team (<cookbooks@chef.io>)
 
-```text
-Copyright:: 2009-2015, Chef Software, Inc
+**Copyright:** 2009-2015, Chef Software, Inc.
 
+```
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
