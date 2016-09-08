@@ -12,7 +12,7 @@ Updates motd.tail with Chef Roles
 
 ### Chef
 
-- Chef 12+
+- Chef 12.1+
 
 ### Cookbooks
 
