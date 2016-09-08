@@ -1,32 +1,28 @@
-motd-tail Cookbook
-==================
+# motd-tail Cookbook
 
-[![Build Status](https://travis-ci.org/chef-cookbooks/motd-tail.svg?branch=master)](http://travis-ci.org/chef-cookbooks/motd-tail)
-[![Cookbook Version](https://img.shields.io/cookbook/v/motd-tail.svg)](https://supermarket.chef.io/cookbooks/motd-tail)
+[![Build Status](https://travis-ci.org/chef-cookbooks/motd-tail.svg?branch=master)](http://travis-ci.org/chef-cookbooks/motd-tail) [![Cookbook Version](https://img.shields.io/cookbook/v/motd-tail.svg)](https://supermarket.chef.io/cookbooks/motd-tail)
 
 Updates motd.tail with Chef Roles
 
-Requirements
-------------
-#### Platforms
+## Requirements
+
+### Platforms
+
 - Debian/Ubuntu
 
-#### Chef
-- Chef 11+
+### Chef
 
-#### Cookbooks
+- Chef 12+
+
+### Cookbooks
+
 - None
 
+## Attributes
 
-Attributes
-----------
+- `node['motd-tail']['additional_text']` - Additional text to add to the end of the motd.tail (e.g. unauthorized access banner).
 
-* `node['motd-tail']['additional_text']` - Additional text to add to the end
-  of the motd.tail (e.g. unauthorized access banner).
-
-
-Usage
------
+## Usage
 
 ```json
 "run_list": [
@@ -34,32 +30,33 @@ Usage
 ]
 ```
 
-###default
+### default
 
 Updates motd.tail with useful node data
 
-###Examples
+### Examples
 
 For example,
 
-    % ssh myserver.int.example.org
-    ***
-    Chef-Client - myserver.int.example.org
-    ubuntu
-    samba_server
-    netatalk_server
-    munin_server
-    rsyslog_server
-    ***
+```
+% ssh myserver.int.example.org
+***
+Chef-Client - myserver.int.example.org
+ubuntu
+samba_server
+netatalk_server
+munin_server
+rsyslog_server
+***
 
-    Additional text here when `node['motd-tail']['additional_text']` present.
+Additional text here when `node['motd-tail']['additional_text']` present.
+```
 
-License & Authors
------------------
+## License & Authors
 
-**Author:** Cookbook Engineering Team (<cookbooks@chef.io>)
+**Author:** Cookbook Engineering Team ([cookbooks@chef.io](mailto:cookbooks@chef.io))
 
-**Copyright:** 2009-2015, Chef Software, Inc.
+**Copyright:** 2009-2016, Chef Software, Inc.
 
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
