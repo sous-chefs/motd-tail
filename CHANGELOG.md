@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the motd-tail cookbook.
 
+## 4.0.1 (2016-09-08)
+
+- Fix specs and matcher
+
 ## 4.0.0 (2016-09-07)
 
 - Resolve rubocop warning
