@@ -2,8 +2,9 @@
 # Cookbook Name:: motd-tail
 # Provider:: motd_tail
 #
-# Author:: Sean OMeara <someara@chef.io>
-# Copyright 2013-2015, Chef Software Inc.
+# Author:: Sean OMeara <someara@sean.io>
+# Author:: Tim Smith <tsmith@chef.io>
+# Copyright 2013-2016, Chef Software Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License""");
 # you may not use this file except in compliance with the License.
@@ -19,32 +20,29 @@
 # limitations under the License.
 #
 
-class Chef::Provider::MotdTail < Chef::Provider::LWRPBase
-  use_inline_resources
+provides :motd_tail
 
-  def whyrun_supported?
-    true
-  end
+property :path, String, name_attribute: true
+property :template_source, String
 
-  action :create do
-    template new_resource.path do
-      if new_resource.template_source.nil?
-        source 'motd.tail.erb'
-        cookbook 'motd-tail'
-      else
-        source new_resource.template_source
-      end
-      owner 'root'
-      group 'root'
-      mode '0644'
-      backup 0
-      action :create
+action :create do
+  template new_resource.path do
+    if new_resource.template_source.nil?
+      source 'motd.tail.erb'
+      cookbook 'motd-tail'
+    else
+      source new_resource.template_source
     end
+    mode '0644'
+    owner 'root'
+    group 'root'
+    backup 0
+    action :create
   end
+end
 
-  action :delete do
-    file new_resource.path do
-      action :delete
-    end
+action :delete do
+  file new_resource.path do
+    action :delete
   end
 end
