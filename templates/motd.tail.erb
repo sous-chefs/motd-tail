@@ -1,22 +1,24 @@
 ***
 Chef-Client - <%= node.name %>
 Hostname: <%= node['cloud'] ? node['cloud']['public_hostname'] : node['fqdn'] %>
-<% if ! Chef::Config[:solo] -%>
+<% unless Chef::Config[:solo] -%>
 Chef Server: <%= Chef::Config[:chef_server_url] %>
 <% end -%>
 <% if Chef::Config[:use_policyfile] -%>
 Policy Group: <%= node.policy_group %>
 Policy Name: <%= node.policy_name %>
 <% else -%>
-<% if node.chef_environment != '_default' -%>
+<% unless node.chef_environment == '_default' -%>
 Environment: <%= node.chef_environment %>
 <% end -%>
+<% unless node['roles'].empty? %>
 
 Roles:
 <% node['roles'].each do |role| -%>
   <%= role %>
-<% end -%>
-<% end -%>
+<% end # roles each -%>
+<% end # roles.empty? -%>
+<% end # else ! policy files -%>
 <% if node['tags'] && !node['tags'].empty? -%>
 
 Tags:
