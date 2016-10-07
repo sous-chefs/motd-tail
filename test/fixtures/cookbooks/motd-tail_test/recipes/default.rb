@@ -1,4 +1,4 @@
-#
+apt_update 'update'
 
 motd_tail '/etc/motd.tail.josh' do
   action :create

@@ -12,7 +12,8 @@ recipe 'motd-tail', 'Updates motd.tail with useful node data'
   supports os
 end
 
+depends 'compat_resource', '>= 12.14.7'
+
 source_url 'https://github.com/chef-cookbooks/motd-tail'
 issues_url 'https://github.com/chef-cookbooks/motd-tail/issues'
-
 chef_version '>= 12.1'
