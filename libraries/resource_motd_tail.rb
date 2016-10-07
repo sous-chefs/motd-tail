@@ -24,6 +24,6 @@ class Chef::Resource::MotdTail < Chef::Resource::LWRPBase
 
   actions :create, :delete
   default_action :create
-  attribute :path, kind_of: String, name_attribute: true, default: '/etc/motd.tail'
+  attribute :path, kind_of: String, name_attribute: true
   attribute :template_source, kind_of: String, default: nil
 end
