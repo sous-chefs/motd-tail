@@ -27,20 +27,18 @@ class Chef::Provider::MotdTail < Chef::Provider::LWRPBase
   end
 
   action :create do
-    converge_by 'write the template' do
-      template new_resource.path do
-        if new_resource.template_source.nil?
-          source 'motd.tail.erb'
-          cookbook 'motd-tail'
-        else
-          source new_resource.template_source
-        end
-        owner 'root'
-        group 'root'
-        mode '0644'
-        backup 0
-        action :create
+    template new_resource.path do
+      if new_resource.template_source.nil?
+        source 'motd.tail.erb'
+        cookbook 'motd-tail'
+      else
+        source new_resource.template_source
       end
+      owner 'root'
+      group 'root'
+      mode '0644'
+      backup 0
+      action :create
     end
   end
 
