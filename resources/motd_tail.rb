@@ -47,9 +47,7 @@ action :create do
       source '99-chef_info.erb'
       cookbook 'motd-tail'
       mode '0755'
-      variables({
-        :path => new_resource.path
-      })
+      variables(path: new_resource.path)
     end
   end
 end
