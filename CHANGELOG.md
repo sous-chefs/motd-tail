@@ -2,6 +2,15 @@
 
 This file is used to list changes made in each version of the motd-tail cookbook.
 
+## 4.1.0 (2017-01-18)
+
+- Update chef requirement in the readme
+- Show policy group/name when using policyfiles
+- Fix deprecation warning
+- Remove superfluous converge_by
+- Convert to a custom resource
+- Support Ubuntu 14.04+
+
 ## 4.0.1 (2016-09-08)
 
 - Fix specs and matcher
