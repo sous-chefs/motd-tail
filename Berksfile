@@ -4,5 +4,4 @@ metadata
 
 group :integration do
   cookbook 'motd-tail_test', path: 'test/fixtures/cookbooks/motd-tail_test'
-  cookbook 'yum'
 end
