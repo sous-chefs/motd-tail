@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the motd-tail cookbook.
 
+## 5.0.0 (2017-02-27)
+
+- Require Chef 12.5+ and remove compat_resource dep
+
 ## 4.1.0 (2017-01-18)
 
 - Update chef requirement in the readme
