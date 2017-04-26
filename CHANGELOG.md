@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the motd-tail cookbook.
 
+## 5.0.1 (2017-04-26)
+
+- Update apache2 license string
+
 ## 5.0.0 (2017-02-27)
 
 - Require Chef 12.5+ and remove compat_resource dep
