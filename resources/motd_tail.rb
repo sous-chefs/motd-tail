@@ -43,7 +43,7 @@ action :create do
   if node['platform_version'].to_f > 12.04
     package 'update-motd'
 
-    template '/etc/update-motd.d/99-chef_info' do
+    template '/etc/update-motd.d/99-chef-info' do
       source '99-chef_info.erb'
       cookbook 'motd-tail'
       mode '0755'
