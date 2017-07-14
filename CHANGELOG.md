@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the motd-tail cookbook.
 
+## 5.0.2 (2017-07-14)
+
+- changed name of update-motd.d script, script is not run with underscore in name on canonical 14.04 and 16.04 default images
+
 ## 5.0.1 (2017-04-26)
 
 - Update apache2 license string
