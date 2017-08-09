@@ -32,4 +32,19 @@ describe 'motd-tail_test::default' do
       mode: '0644'
     )
   end
+
+  it 'creates an motd for bob' do
+    expect(chef_run).to create_motd_tail('/etc/motd.tail.bob').with(
+      template_source:   'motd.tail.bob.erb',
+      template_cookbook: 'motd-custom'
+    )
+  end
+
+  it 'steps into motd_tail for bob' do
+    expect(chef_run).to create_template('/etc/motd.tail.bob').with(
+      owner: 'root',
+      group: 'root',
+      mode: '0644'
+    )
+  end
 end

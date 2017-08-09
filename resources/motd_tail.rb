@@ -24,15 +24,15 @@ provides :motd_tail
 
 property :path, String, name_attribute: true
 property :template_source, String
+property :template_cookbook, String
 
 action :create do
+  new_resource.template_source   ||= 'motd.tail.erb'
+  new_resource.template_cookbook ||= 'motd-tail'
+
   template new_resource.path do
-    if new_resource.template_source.nil?
-      source 'motd.tail.erb'
-      cookbook 'motd-tail'
-    else
-      source new_resource.template_source
-    end
+    source new_resource.template_source
+    cookbook new_resource.template_cookbook
     mode '0644'
     owner 'root'
     group 'root'
