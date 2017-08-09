@@ -4,7 +4,7 @@ maintainer_email 'cookbooks@chef.io'
 license 'Apache-2.0'
 description 'Updates motd.tail with Chef Roles'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '5.0.2'
+version '5.1.0'
 
 recipe 'motd-tail', 'Updates motd.tail with useful node data'
 
