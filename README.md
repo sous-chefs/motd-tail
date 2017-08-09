@@ -30,6 +30,14 @@ Updates motd.tail with Chef Roles
 ]
 ```
 
+```
+motd_tail '/etc/motd.tail' do
+  action :create
+  template_source   'motd.custom.erb'
+  template_cookbook 'custom.cookbook.name'
+end
+```
+
 ### default
 
 Updates motd.tail with useful node data
