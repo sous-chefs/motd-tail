@@ -22,7 +22,7 @@
 
 provides :motd_tail
 
-property :path, String, name_attribute: true
+property :path, String, name_property: true
 property :template_source, String
 property :template_cookbook, String
 
