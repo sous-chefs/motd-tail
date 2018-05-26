@@ -60,6 +60,7 @@ spec/*
 Rakefile
 .travis.yml
 .foodcritic
+appveyor.yml
 .codeclimate.yml
 
 # SCM #
@@ -82,20 +83,14 @@ Berksfile.lock
 cookbooks/*
 tmp
 
+# Policyfile #
+##############
+Policyfile.rb
+Policyfile.lock.json
+
 # Cookbooks #
 #############
 CONTRIBUTING*
 CHANGELOG*
 TESTING*
 
-# Strainer #
-############
-Colanderfile
-Strainerfile
-.colander
-.strainer
-
-# Vagrant #
-###########
-.vagrant
-Vagrantfile
