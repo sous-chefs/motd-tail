@@ -35,7 +35,7 @@ describe 'motd-tail_test::default' do
 
   it 'creates an motd for bob' do
     expect(chef_run).to create_motd_tail('/etc/motd.tail.bob').with(
-      template_source:   'motd.tail.bob.erb',
+      template_source: 'motd.tail.bob.erb',
       template_cookbook: 'motd-custom'
     )
   end
