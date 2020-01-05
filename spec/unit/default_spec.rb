@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'motd-tail::default' do
   let(:chef_run) do
-    ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '16.04',
+    ChefSpec::ServerRunner.new(platform: 'ubuntu',
                                step_into: 'motd_tail').converge(described_recipe)
   end
 
