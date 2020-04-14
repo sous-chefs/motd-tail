@@ -5,9 +5,8 @@ license 'Apache-2.0'
 description 'Updates motd.tail with Chef Roles'
 version '5.1.0'
 
-%w(debian ubuntu).each do |os|
-  supports os
-end
+supports 'debian'
+supports 'ubuntu'
 
 source_url 'https://github.com/chef-cookbooks/motd-tail'
 issues_url 'https://github.com/chef-cookbooks/motd-tail/issues'
