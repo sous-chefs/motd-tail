@@ -4,7 +4,7 @@ This file is used to list changes made in each version of the motd-tail cookbook
 
 ## Unreleased
 
-- resolved cookstyle error: metadata.rb:8:1 refactor: `ChefStyle/OverlyComplexSupportsDependsMetadata`
+- Cookstyle fixes
 
 ## 5.1.0 (2017-08-09)
 
