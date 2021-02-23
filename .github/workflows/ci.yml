@@ -66,7 +66,7 @@ jobs:
         with:
           suite: ${{ matrix.suite }}
           os: ${{ matrix.os }}
-  
+
   final:
     needs: [dokken]
     runs-on: ubuntu-latest

@@ -20,6 +20,6 @@ platforms:
   - name: ubuntu-20.04
 
 suites:
-- name: default
-  run_list:
-  - recipe[motd-tail]
+  - name: default
+    run_list:
+      - recipe[motd-tail]
