@@ -4,6 +4,7 @@ This file is used to list changes made in each version of the motd-tail cookbook
 
 ## Unreleased
 
+- Sous Chefs Adoption
 - Cookstyle fixes
 
 ## 5.1.0 (2017-08-09)
