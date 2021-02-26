@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the motd-tail cookbook.
 
-## Unreleased
+## 5.2.0 - *2021-02-26*
 
 - Sous Chefs Adoption
 - Cookstyle fixes
