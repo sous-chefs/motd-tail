@@ -8,5 +8,4 @@ source_url        'https://github.com/sous-chefs/motd-tail'
 issues_url        'https://github.com/sous-chefs/motd-tail/issues'
 chef_version      '>= 12.15'
 
-supports 'debian'
 supports 'ubuntu'

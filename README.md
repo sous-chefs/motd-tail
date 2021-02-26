@@ -16,7 +16,7 @@ This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of
 
 ### Platforms
 
-- Debian/Ubuntu
+- Ubuntu
 
 ### Chef
 
