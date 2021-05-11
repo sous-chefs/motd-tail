@@ -4,6 +4,7 @@ This file is used to list changes made in each version of the motd-tail cookbook
 
 ## Unreleased
 
+- resolved cookstyle error: resources/motd_tail.rb:1:1 refactor: `Chef/Deprecations/ResourceWithoutUnifiedTrue`
 - resolved cookstyle error: metadata.rb:8:1 refactor: `ChefStyle/OverlyComplexSupportsDependsMetadata`
 
 ## 5.1.0 (2017-08-09)
