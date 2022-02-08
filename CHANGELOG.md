@@ -2,6 +2,8 @@
 
 This file is used to list changes made in each version of the motd-tail cookbook.
 
+## Unreleased
+
 ## 5.2.3 - *2022-02-08*
 
 - Remove delivery folder
