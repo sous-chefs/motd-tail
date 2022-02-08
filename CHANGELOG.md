@@ -4,6 +4,8 @@ This file is used to list changes made in each version of the motd-tail cookbook
 
 ## Unreleased
 
+- Remove delivery folder
+
 ## 5.2.2 - *2021-08-31*
 
 - Standardise files with files in sous-chefs/repo-management
