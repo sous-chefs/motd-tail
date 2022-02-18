@@ -4,6 +4,7 @@ This file is used to list changes made in each version of the motd-tail cookbook
 
 ## Unreleased
 
+- resolved cookstyle error: resources/motd_tail.rb:1:1 refactor: `Chef/Deprecations/ResourceWithoutUnifiedTrue`
 ## 5.2.3 - *2022-02-08*
 
 - Remove delivery folder
