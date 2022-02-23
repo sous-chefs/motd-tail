@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the motd-tail cookbook.
 
-## Unreleased
+## 6.0.0 - *2022-02-23*
 
 - resolved cookstyle error: resources/motd_tail.rb:1:1 refactor: `Chef/Deprecations/ResourceWithoutUnifiedTrue`
 - Require Chef 15.3+ for unified_mode support
