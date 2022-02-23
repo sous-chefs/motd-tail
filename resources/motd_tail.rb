@@ -21,6 +21,7 @@
 #
 
 provides :motd_tail
+unified_mode true
 
 property :path, String, name_property: true
 property :template_source, String

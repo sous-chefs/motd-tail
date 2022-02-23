@@ -4,6 +4,10 @@ This file is used to list changes made in each version of the motd-tail cookbook
 
 ## Unreleased
 
+- resolved cookstyle error: resources/motd_tail.rb:1:1 refactor: `Chef/Deprecations/ResourceWithoutUnifiedTrue`
+- Require Chef 15.3+ for unified_mode support
+- Enable unified_mode for Chef 17+ support
+
 ## 5.2.3 - *2022-02-08*
 
 - Remove delivery folder
