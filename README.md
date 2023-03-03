@@ -20,7 +20,7 @@ This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of
 
 ### Chef
 
-- Chef 12.5+
+- Chef 15.3+
 
 ### Cookbooks
 
@@ -38,7 +38,7 @@ This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of
 ]
 ```
 
-```
+```ruby
 motd_tail '/etc/motd.tail' do
   action :create
   template_source   'motd.custom.erb'
@@ -54,7 +54,7 @@ Updates motd.tail with useful node data
 
 For example,
 
-```
+```ruby
 % ssh myserver.int.example.org
 ***
 Chef-Client - myserver.int.example.org
