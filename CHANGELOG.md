@@ -2,6 +2,8 @@
 
 This file is used to list changes made in each version of the motd-tail cookbook.
 
+## Unreleased
+
 ## 6.0.9 - *2023-12-27*
 
 ## 6.0.8 - *2023-10-31*
