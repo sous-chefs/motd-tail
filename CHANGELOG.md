@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of the motd-tail cookbook.
 
+## [6.0.13](https://github.com/sous-chefs/motd-tail/compare/6.0.12...v6.0.13) (2025-10-15)
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#58](https://github.com/sous-chefs/motd-tail/issues/58)) ([be07cce](https://github.com/sous-chefs/motd-tail/commit/be07cce8f52b56576e250a8e6391fd332c1b2607))
+
 ## 6.0.0 - *2022-02-23*
 
 * resolved cookstyle error: resources/motd_tail.rb:1:1 refactor: `Chef/Deprecations/ResourceWithoutUnifiedTrue`
