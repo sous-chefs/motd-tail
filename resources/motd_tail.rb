@@ -1,36 +1,19 @@
-#
-# Cookbook:: motd-tail
-# Provider:: motd_tail
-#
-# Author:: Sean OMeara <someara@sean.io>
-# Author:: Tim Smith <tsmith@chef.io>
-# Copyright:: 2013-2019, Chef Software Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License""");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-# implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
+# frozen_string_literal: true
 
 provides :motd_tail
 unified_mode true
+default_action :create
 
 property :path, String, name_property: true
-property :template_source, String
-property :template_cookbook, String
+property :template_source, String, default: 'motd.tail.erb'
+property :template_cookbook, String, default: 'motd-tail'
+property :additional_text, [String, nil]
+property :manage_update_motd, [true, false], default: true
+property :update_motd_package, String, default: 'update-motd'
+property :update_motd_script_path, String, default: '/etc/update-motd.d/99-chef-info'
+property :update_motd_template_source, String, default: '99-chef_info.erb'
 
 action :create do
-  new_resource.template_source   ||= 'motd.tail.erb'
-  new_resource.template_cookbook ||= 'motd-tail'
-
   template new_resource.path do
     source new_resource.template_source
     cookbook new_resource.template_cookbook
@@ -38,16 +21,19 @@ action :create do
     owner 'root'
     group 'root'
     backup 0
+    variables(additional_text: new_resource.additional_text)
     action :create
   end
 
-  if node['platform_version'].to_f > 12.04
-    package 'update-motd'
+  if new_resource.manage_update_motd
+    package new_resource.update_motd_package
 
-    template '/etc/update-motd.d/99-chef-info' do
-      source '99-chef_info.erb'
+    template new_resource.update_motd_script_path do
+      source new_resource.update_motd_template_source
       cookbook 'motd-tail'
       mode '0755'
+      owner 'root'
+      group 'root'
       variables(path: new_resource.path)
     end
   end
@@ -55,6 +41,10 @@ end
 
 action :delete do
   file new_resource.path do
+    action :delete
+  end
+
+  file new_resource.update_motd_script_path do
     action :delete
   end
 end
