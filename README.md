@@ -6,7 +6,7 @@
 [![OpenCollective](https://opencollective.com/sous-chefs/sponsors/badge.svg)](#sponsors)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Updates motd.tail with Chef Roles
+Provides the `motd_tail` resource for managing Ubuntu MOTD tail content.
 
 ## Maintainers
 
@@ -26,29 +26,23 @@ This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of
 
 - None
 
-## Attributes
-
-- `node['motd-tail']['additional_text']` - Additional text to add to the end of the motd.tail (e.g. unauthorized access banner).
-
 ## Usage
-
-```json
-"run_list": [
-    "recipe[motd-tail]"
-]
-```
 
 ```ruby
 motd_tail '/etc/motd.tail' do
   action :create
+  additional_text 'Authorized access only'
   template_source   'motd.custom.erb'
   template_cookbook 'custom.cookbook.name'
 end
 ```
 
-### default
+See [migration.md](migration.md) for the breaking change from recipes and node
+attributes to resource properties.
 
-Updates motd.tail with useful node data
+## Resources
+
+- [motd_tail](documentation/motd-tail_motd_tail.md)
 
 ### Examples
 
@@ -65,7 +59,7 @@ munin_server
 rsyslog_server
 ***
 
-Additional text here when `node['motd-tail']['additional_text']` present.
+Additional text here when the `additional_text` property is set.
 ```
 
 ## Contributors

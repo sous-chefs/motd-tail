@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 source 'https://supermarket.chef.io'
 
 metadata
 
 group :integration do
-  cookbook 'motd-tail_test', path: 'test/fixtures/cookbooks/motd-tail_test'
+  cookbook 'test', path: 'test/cookbooks/test'
 end
