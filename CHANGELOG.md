@@ -2,6 +2,22 @@
 
 This file is used to list changes made in each version of the motd-tail cookbook.
 
+## [7.0.0](https://github.com/sous-chefs/motd-tail/compare/v6.0.13...v7.0.0) (2026-05-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate motd-tail to custom resources ([#63](https://github.com/sous-chefs/motd-tail/issues/63))
+
+### Features
+
+* migrate motd-tail to custom resources ([#63](https://github.com/sous-chefs/motd-tail/issues/63)) ([ec55807](https://github.com/sous-chefs/motd-tail/commit/ec558077c15073a7a96eea8586bbf4bc6bbb110f))
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#58](https://github.com/sous-chefs/motd-tail/issues/58)) ([be07cce](https://github.com/sous-chefs/motd-tail/commit/be07cce8f52b56576e250a8e6391fd332c1b2607))
+
 ## [6.0.13](https://github.com/sous-chefs/motd-tail/compare/6.0.12...v6.0.13) (2025-10-15)
 
 
